@@ -5,10 +5,11 @@ const activityLogDiv = document.getElementById('activity-log-div');
 
 for (const button of buttons) {
     button.addEventListener('click', function () {
+        alert('Board Updated Succesfully');
         // Disable button
         button.disabled = true;
         button.style.backgroundColor = '#ced6fd';
-        button.style.cursor = 'not-allowed';
+        button.style.cursor = 'default';
 
         // Decrement task numbers
         let decrementTaskNumber = parseInt(taskAssignedButton.innerText);
@@ -45,7 +46,17 @@ for (const button of buttons) {
 }
 
 // Clear history
-const clearHistoryButton = document.getElementById('clear-history-button');
-clearHistoryButton.addEventListener('click', function () {
+const clearHistoryButton = document.getElementById('clear-history-button').addEventListener('click', function () {
     activityLogDiv.innerHTML = '';
+});
+
+// Random background color
+const bgColor = document.getElementById('bg-color');
+const body = document.getElementById('body');
+bgColor.addEventListener('click', function () {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    const a = Math.random().toFixed(2);
+    body.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`;
 });

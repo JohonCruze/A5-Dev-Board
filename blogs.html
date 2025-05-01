@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevBoard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind & Daisy UI Link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Style CSS -->
+    <style>
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body id="body" class="font-poppins bg-[#f7f6fe]">
+    <header class="xl:container xl:mx-auto lg:container lg:mx-auto md:container md:mx-auto sm:container sm:mx-auto">
+        <nav class="py-10">
+            <div class="navbar bg-base-100 shadow rounded-xl px-5 py-2">
+                <div class="flex-1 flex items-center gap-2">
+                    <span><img class="w-8" src="./assets/logo.png" alt="" /></span>
+                    <a class="cursor-pointer text-3xl font-semibold"><span class="font-light">Dev</span>Board</a>
+                </div>
+                <div class="flex gap-8 items-center">
+                    <div class="flex gap-3 items-center p-1">
+                        <a href="./index.html" class="bg-[#4228e2] text-white cursor-pointer rounded px-6 py-3">Back to Desk</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="xl:container xl:mx-auto lg:container lg:mx-auto md:container md:mx-auto sm:container sm:mx-auto pb-10">
+        <div class="heading mb-10">
+            <h2 class="text-center text-3xl font-bold">Blogs</h2>
+        </div>
+        <section>
+            <div class="question-container">
+                <div class="single-question-box">
+                    <div id="question" class="bg-white p-5 rounded mb-1 border-b-2 border-dashed border-gray-300/50">
+                        <h2 class="font-bold">Question-1: What are the different ways to select an element in the DOM?
+                        </h2>
+                    </div>
+                    <div id="answer" class="bg-white p-5 rounded mb-5 font-normal text-[#3f3f3f]">
+                        <p><strong>Answer:</strong> There is we can use this method to get an element in the DOM.
+                            getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector(),
+                            querySelectorAll()</p>
+                    </div>
+                </div>
+                <div class="single-question-box">
+                    <div id="question" class="bg-white p-5 rounded mb-1 border-b-2 border-dashed border-gray-300/50">
+                        <h2 class="font-bold">Question-2: What is the difference between innerHTML, innerText, and
+                            textContent?</h2>
+                    </div>
+                    <div id="answer" class="bg-white p-5 rounded mb-5 font-normal text-[#3f3f3f]">
+                        <p><strong>Answer:</strong> Difference between innerHtml, innerText, and textContent: <br>
+                            <strong>1. innerHtml</strong> = It provides html text of an entire element.<br>
+                            <strong>2. innerText</strong> = It provides text on an element.<br>
+                            <strong>3. textContent</strong> = It provides raw text of an element.
+                        </p>
+                    </div>
+                </div>
+                <div class="single-question-box">
+                    <div id="question" class="bg-white p-5 rounded mb-1 border-b-2 border-dashed border-gray-300/50">
+                        <h2 class="font-bold">Question-3: What is event delegation in the DOM?</h2>
+                    </div>
+                    <div id="answer" class="bg-white p-5 rounded mb-5 font-normal text-[#3f3f3f]">
+                        <p><strong>Answer:</strong> Instead of attaching events to many elements, let a parent handle them and check to respond accordingly.</p>
+                    </div>
+                </div>
+                <div class="single-question-box">
+                    <div id="question" class="bg-white p-5 rounded mb-1 border-b-2 border-dashed border-gray-300/50">
+                        <h2 class="font-bold">Question-4: What is event bubbling in the DOM?</h2>
+                    </div>
+                    <div id="answer" class="bg-white p-5 rounded mb-5 font-normal text-[#3f3f3f]">
+                        <p><strong>Answer:</strong> Event bubbling means when you click an element, that event also triggers on all its parent elements, like bubbles rising to the surface.</p>
+                    </div>
+                </div>
+                <div class="single-question-box">
+                    <div id="question" class="bg-white p-5 rounded mb-1 border-b-2 border-dashed border-gray-300/50">
+                        <h2 class="font-bold">Question-5: How do you create, add, and remove elements using JavaScript?
+                        </h2>
+                    </div>
+                    <div id="answer" class="bg-white p-5 rounded mb-5 font-normal text-[#3f3f3f]">
+                        <p><strong>Answer:</strong> To create, add, and remove elements using JavaScript:
+                            <br>
+                            <strong>1. Create:</strong> document.createElement() <br>
+                            <strong>2. Add:</strong>  appendChild()<br>
+                            <strong>3. Remove:</strong> element.remove()</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <!-- <script src="tailwind.config.js"></script> -->
+</body>
+
+</html>
