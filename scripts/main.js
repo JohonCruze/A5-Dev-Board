@@ -11,7 +11,6 @@ for (const button of buttons) {
         button.style.cursor = 'not-allowed';
 
         // Decrement task numbers
-
         let decrementTaskNumber = parseInt(taskAssignedButton.innerText);
         decrementTaskNumber = decrementTaskNumber - 1;
 
@@ -44,3 +43,9 @@ for (const button of buttons) {
         activityLogDiv.appendChild(createDiv);
     });
 }
+
+// Clear history
+const clearHistoryButton = document.getElementById('clear-history-button');
+clearHistoryButton.addEventListener('click', function () {
+    activityLogDiv.innerHTML = '';
+});
