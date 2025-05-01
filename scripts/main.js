@@ -10,6 +10,8 @@ for (const button of buttons) {
         button.style.backgroundColor = '#ced6fd';
         button.style.cursor = 'not-allowed';
 
-        
+        // Decrement task numbers
+        let taskNumber = parseInt(taskAssignedButton.innerText);
+        taskAssignedButton.innerText = taskNumber - 1;
     });
 }
