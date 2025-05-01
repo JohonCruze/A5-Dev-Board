@@ -60,3 +60,19 @@ bgColor.addEventListener('click', function () {
     const a = Math.random().toFixed(2);
     body.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`;
 });
+
+
+// Current Date & Time
+
+const now = new Date();
+  
+  const dayName = now.toLocaleString('en-US', { weekday: 'short' });
+  
+  const currentDate = now.toLocaleString('en-US', { 
+    month: 'short', 
+    day: 'numeric', 
+    year: 'numeric' 
+  });
+
+  document.getElementById('day-name').textContent = `${dayName},`;
+  document.getElementById('full-date').textContent = currentDate;
