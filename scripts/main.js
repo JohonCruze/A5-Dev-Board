@@ -11,7 +11,15 @@ for (const button of buttons) {
         button.style.cursor = 'not-allowed';
 
         // Decrement task numbers
-        let taskNumber = parseInt(taskAssignedButton.innerText);
-        taskAssignedButton.innerText = taskNumber - 1;
+        let decrementTaskNumber = parseInt(taskAssignedButton.innerText);
+        taskAssignedButton.innerText = decrementTaskNumber - 1;
+
+        // Increment task numbers
+        let incrementTaskNumber = parseInt(completedTask.innerText);
+        completedTask.innerText = incrementTaskNumber + 1;
+
+        // Getheading
+        const card = button.parentElement.parentElement.parentElement;
+        const heading = card.querySelector('h2');
     });
 }
